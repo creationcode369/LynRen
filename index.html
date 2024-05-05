@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LynRen</title>
+    <!-- Include Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.3/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/hero.css" />
+    <link rel="stylesheet" href="./css/service.css" />
+    <link rel="stylesheet" href="./css/contact.css" />
+    <link rel="stylesheet" href="./css/footer.css">
+    <script src="./js/hero.js"></script>
+    <script src="./js/service.js"></script>
+    <script src="./js/footer.js"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
+
+      .main-fonts {
+        font-family: "Play", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+    </style>
+  </head>
+
+  <body class="bg-black text-white main-fonts">
+    <!-- Navbar -->
+    <nav class="py-4 px-8 flex justify-between items-center">
+      <!-- Logo -->
+      <a href="/" class="flex items-center">
+        <img src="./images/lynrenlogo.png" alt="Logo" class="w-8 h-8 mr-2" />
+        <span class="text-xl font-bold">LynRen</span>
+      </a>
+      <!-- <div>
+          <a href="/services" class="mr-4">Services</a>
+          <a href="/about" class="mr-4">About</a>
+          <a href="/resources" class="mr-4">Resources</a>
+          <a href="/contact">Contact</a>
+      </div> -->
+    </nav>
+
+    <!-- Home Section -->
+    <section class="py-16 px-8 text-center">
+      <h1 class="text-4xl font-bold mb-4">Transforming Businesses with AI</h1>
+      <div class="max-w-4xl mx-auto">
+        <img
+          src="./images/hero.png"
+          alt="Landing Image"
+          class="rounded-lg shadow-lg mx-auto max-w-full h-auto"
+        />
+      </div>
+      <p class="text-lg">
+        At LynRen, we leverage Empowering Your businesses with AI for chatbots,
+        automation, websites, and apps.
+      </p>
+      <br />
+
+      <div class="container mx-auto px-4 py-8 text-center">
+        <button
+          id="openModalBtn"
+          type="button"
+          class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2"
+        >
+          Book a meeting
+        </button>
+        <!-- Fullscreen modal -->
+        <div id="calendlyModal" class="modal">
+          <div class="modal-content">
+            <span id="closeModalBtn" class="close-btn">&times;</span>
+            <iframe
+              id="calendlyIframe"
+              width="100%"
+              height="100%"
+              frameborder="0"
+              style="border: 0"
+              title="Select a Time & Date"
+              src="https://calendly.com/lynrenstudio/30min"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="container mx-auto px-8 py-16">
+      <h2 class="text-3xl font-bold mb-8">Our Services</h2>
+
+      <!-- Main Service Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Service Card 1 -->
+        <div
+          class="bg-black p-6 rounded-lg shadow-lg service-card"
+          onclick="toggleOptions(1)"
+        >
+          <h3 class="text-xl font-bold mb-2">Autonomous Agent Development</h3>
+          <!-- <p>Description of service 1</p> -->
+        </div>
+
+        <!-- Service Card 2 -->
+        <div
+          class="bg-black p-6 rounded-lg shadow-lg service-card"
+          onclick="toggleOptions(2)"
+        >
+          <h3 class="text-xl font-bold mb-2">Chatbots Development</h3>
+          <!-- <p>Description of service 2</p> -->
+        </div>
+
+        <!-- Service Card 3 -->
+        <div
+          class="bg-black p-6 rounded-lg shadow-lg service-card"
+          onclick="toggleOptions(3)"
+        >
+          <h3 class="text-xl font-bold mb-2">Website & App Development</h3>
+          <!-- <p>Description of service 3</p> -->
+        </div>
+      </div>
+
+      <!-- Big Card with Options -->
+      <div
+        id="optionsContainer"
+        class="mt-12 bg-black p-8 rounded-lg shadow-lg hidden"
+      >
+        <h3 id="optionsTitle" class="text-xl font-bold mb-4"></h3>
+
+        <!-- Option Buttons -->
+        <div class="flex justify-between mb-4" id="optionButtons">
+          <!-- Option buttons will be dynamically generated here -->
+        </div>
+
+        <!-- Option Content (Paragraphs) -->
+        <div id="optionContent">
+          <!-- Initial content for the first option of Service 1 will be displayed here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16 px-8 text-center">
+      <h2 class="text-2xl font-bold mb-8">About Us</h2>
+      <div>
+        <img
+          src="./images/about.png"
+          alt="About Us"
+          class="mx-auto rounded-full mb-6"
+          style="width: 150px; height: 150px"
+        />
+        <p class="text-lg">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod
+          voluptatem culpa sint debitis, veritatis perferendis reprehenderit ab
+          deserunt exercitationem vitae dolorum repellat necessitatibus nisi
+          doloribus quaerat ducimus libero soluta. Ad officiis temporibus
+          aspernatur, totam possimus dolor modi dignissimos, corporis fugiat
+          voluptate similique expedita, tempora iusto in sunt nihil quasi
+          facere.
+        </p>
+      </div>
+    </section>
+    <!-- Resource Section -->
+    <section class="py-16 px-8">
+      <h2 class="text-2xl font-bold mb-8">Resources</h2>
+      <div class="max-w-md mx-auto bg-gray-100 rounded-lg overflow-hidden shadow-lg p-6">
+        <h1 class="text-2xl font-bold mb-4 text-black">
+          Get Resources for <span class="text-blue-500">Free</span>
+        </h1>
+    
+        <!-- Form -->
+        <form class="max-w-sm mx-auto">
+          <div class="mb-5">
+            <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your Name</label>
+            <input type="text" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter your name" required />
+        </div>
+          <div class="mb-5">
+            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
+            <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@flowbite.com" required />
+          </div>
+
+       <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+        </form>
+        
+      </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="py-16 px-8">
+      <h2 class="text-2xl font-bold mb-8 text-center">Contact Us</h2>
+      <form action="#" method="post" class="form-container">
+        <div class="mb-4">
+          <label for="name" class="block mb-2">Name</label>
+          <input type="text" id="name" name="name" placeholder="Eoin Morgan" />
+        </div>
+        <div class="mb-4">
+          <label for="phone" class="block mb-2">Phone Number</label>
+          <input type="text" id="phone" name="phone" placeholder="0000000000" />
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block mb-2">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="morgan@contact.com"
+          />
+        </div>
+        <div class="mb-4">
+          <label for="company" class="block mb-2">Company Name</label>
+          <input type="text" id="company" name="company" placeholder="EM LLC" />
+        </div>
+        <div class="mb-4">
+          <label for="message" class="block mb-2">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            placeholder="hey, LynRen i want to build a Shoping Website"
+          ></textarea>
+        </div>
+        <button type="submit" class="hover:bg-gray-200">Send</button>
+      </form>
+    </section>
+
+    <!-- Footer Section -->
+
+    <footer class="bg-gray-900 text-white py-8 px-4 flex flex-col items-center">
+      <div class="mb-4">
+          <img src="path_to_your_logo.png" alt="Logo" class="h-12">
+      </div>
+      <div class="mb-4 flex space-x-4">
+          <a href="https://instagram.com/your_instagram" target="_blank">
+              <img src="instagram_icon.png" alt="Instagram" class="h-8">
+          </a>
+      </div>
+      <div class="mb-4 flex space-x-4">
+          <a href="#" class="hover:underline">Privacy & Policy</a>
+          <a href="#" class="hover:underline">Terms & Conditions</a>
+      </div>
+      <div class="border-t border-white w-20 mb-4"></div>
+      <div class="text-sm">&copy; 2024 Your Company Name. All rights reserved.</div>
+  </footer>
+
+  </body>
+</html>

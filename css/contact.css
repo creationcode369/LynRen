@@ -1,0 +1,38 @@
+        /* Form container */
+        .form-container {
+            max-width: 28rem; /* Adjust as needed */
+            margin: 0 auto;
+            padding: 2rem;
+            border: 2px solid white;
+            border-radius: 0.5rem;
+        }
+
+        /* Input and textarea styles */
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: none;
+            border-radius: 0.25rem;
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            outline: none; /* Remove input focus outline */
+        }
+
+        /* Button styles */
+        button[type="submit"] {
+            background-color: white;
+            color: black;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #f0f0f0; /* Light gray hover color */
+        }

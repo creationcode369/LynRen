@@ -1,0 +1,48 @@
+        /* Custom styles */
+        body {
+            background-color: black;
+            color: white;
+        }
+
+        .service-card {
+            cursor: pointer;
+            border: 2px solid white;
+        }
+
+        .option-card {
+            display: none;
+        }
+
+        .option-card.active {
+            display: block;
+        }
+
+        /* Button styling */
+        button {
+            background-color: black;
+            color: white;
+            border: 2px solid white;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            margin-bottom: 1rem; /* Add margin between buttons */
+        }
+
+        button:hover,
+        button:focus {
+            background-color: white;
+            color: black;
+        }
+
+        /* Flexbox styles for button container */
+        #optionButtons {
+            display: flex;
+            flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+            justify-content: space-between; /* Distribute buttons evenly */
+        }
+
+        /* Media query for responsiveness */
+        @media (max-width: 768px) {
+            #optionButtons {
+                flex-direction: column; /* Stack buttons vertically on smaller screens */
+            }
+        }
