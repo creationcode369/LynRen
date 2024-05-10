@@ -1,0 +1,33 @@
+/* Customize pop-up styles */
+.bg-black {
+    background-color: rgba(0, 0, 0, 0.75); /* Adjust opacity as needed */
+  }
+  
+  #privacyPopup,
+  #termsPopup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #privacyPopup .bg-white,
+  #termsPopup .bg-white {
+    width: 100%;
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  
+  #closePrivacyBtn,
+  #closeTermsBtn {
+    cursor: pointer;
+  }
+  
+  /* Responsive styles */
+  @media (min-width: 640px) {
+    #privacyPopup .bg-white,
+    #termsPopup .bg-white {
+      max-width: 600px;
+    }
+  }
+  

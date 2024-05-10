@@ -4,6 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LynRen</title>
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Welcome to LynRen, pioneers in AI automation. We craft bespoke
+      solutions for businesses, saving time and money. With expertise in AI,
+      machine learning, and automation, we're committed to excellence. Let's
+      revolutionize your workflow together. Contact us to unlock efficiency,
+      innovation, and success."
+    />
+    <meta name="author" content="LynRen" />
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on Facebook, Twitter, LinkedIn -->
+    <meta property="og:site_name" content="LynRen" />
+    <!-- website name -->
+    <meta property="og:site" content="https://lynren.com/" />
+    <!-- website link -->
+    <meta property="og:title" content="LynRen" />
+    <!-- title shown in the actual shared post -->
+    <meta
+      property="og:description"
+      content="AI automation, Chatbot Development, Website Building, App Building"
+    />
     <!-- Include Tailwind CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.3/dist/tailwind.min.css"
@@ -12,10 +34,14 @@
     <link rel="stylesheet" href="./css/hero.css" />
     <link rel="stylesheet" href="./css/service.css" />
     <link rel="stylesheet" href="./css/contact.css" />
-    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/pop-up.css" />
+    <link rel="stylesheet" href="./css/footer-modal.css" />
     <script src="./js/hero.js"></script>
     <script src="./js/service.js"></script>
     <script src="./js/footer.js"></script>
+    <script src="./js/pop-up.js"></script>
+    <script src="./js/footer-modal.js"></script>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
 
@@ -24,10 +50,15 @@
         font-weight: 400;
         font-style: normal;
       }
+      .main-color {
+        background-color: black;
+        color: white;
+      }
     </style>
   </head>
 
-  <body class="bg-black text-white main-fonts">
+      
+  <body class="main-color main-fonts">
     <!-- Navbar -->
     <nav class="py-4 px-8 flex justify-between items-center">
       <!-- Logo -->
@@ -42,6 +73,28 @@
           <a href="/contact">Contact</a>
       </div> -->
     </nav>
+
+    <!-- HTML for the Popup Section with Close Button -->
+    <!-- <div id="popupSection">
+      <button id="closePopup">&times;</button>
+      <h2>Welcome to Lynren!</h2>
+      <p>get Resources For <u>Free</u></p>
+      <form
+        action="https://api.web3forms.com/submit"
+        method="post"
+        class="form-container"
+        onsubmit="resetForm()"
+      >
+        <input
+          type="hidden"
+          name="access_key"
+          value="c257e8cd-5068-4af9-84aa-a8eb28441322"
+        />
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <button type="submit">Get It</button>
+      </form>
+    </div> -->
 
     <!-- Home Section -->
     <section class="py-16 px-8 text-center">
@@ -150,45 +203,29 @@
           style="width: 150px; height: 150px"
         />
         <p class="text-lg">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod
-          voluptatem culpa sint debitis, veritatis perferendis reprehenderit ab
-          deserunt exercitationem vitae dolorum repellat necessitatibus nisi
-          doloribus quaerat ducimus libero soluta. Ad officiis temporibus
-          aspernatur, totam possimus dolor modi dignissimos, corporis fugiat
-          voluptate similique expedita, tempora iusto in sunt nihil quasi
-          facere.
+          Welcome to LynRen, pioneers in AI automation. We craft bespoke
+          solutions for businesses, saving time and money. With expertise in AI,
+          machine learning, and automation, we're committed to excellence. Let's
+          revolutionize your workflow together. Contact us to unlock efficiency,
+          innovation, and success.
         </p>
       </div>
     </section>
-    <!-- Resource Section -->
-    <section class="py-16 px-8">
-      <h2 class="text-2xl font-bold mb-8">Resources</h2>
-      <div class="max-w-md mx-auto bg-gray-100 rounded-lg overflow-hidden shadow-lg p-6">
-        <h1 class="text-2xl font-bold mb-4 text-black">
-          Get Resources for <span class="text-blue-500">Free</span>
-        </h1>
-    
-        <!-- Form -->
-        <form class="max-w-sm mx-auto">
-          <div class="mb-5">
-            <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your Name</label>
-            <input type="text" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Enter your name" required />
-        </div>
-          <div class="mb-5">
-            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
-            <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@flowbite.com" required />
-          </div>
 
-       <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
-        </form>
-        
-      </div>
-    </section>
-    
     <!-- Contact Section -->
     <section class="py-16 px-8">
       <h2 class="text-2xl font-bold mb-8 text-center">Contact Us</h2>
-      <form action="#" method="post" class="form-container">
+      <form
+        action="https://api.web3forms.com/submit"
+        method="post"
+        class="form-container"
+        onsubmit="resetForm()"
+      >
+        <input
+          type="hidden"
+          name="access_key"
+          value="c257e8cd-5068-4af9-84aa-a8eb28441322"
+        />
         <div class="mb-4">
           <label for="name" class="block mb-2">Name</label>
           <input type="text" id="name" name="name" placeholder="Eoin Morgan" />
@@ -227,20 +264,39 @@
 
     <footer class="bg-gray-900 text-white py-8 px-4 flex flex-col items-center">
       <div class="mb-4">
-          <img src="path_to_your_logo.png" alt="Logo" class="h-12">
+        <img src="./images/lynrenlogo.png" alt="Logo" class="h-12" />
       </div>
       <div class="mb-4 flex space-x-4">
-          <a href="https://instagram.com/your_instagram" target="_blank">
-              <img src="instagram_icon.png" alt="Instagram" class="h-8">
-          </a>
+        <a href="https://www.instagram.com/lynrenstuidio/" target="_blank">
+          <img src="./images/iglogo.png" alt="Instagram" class="h-8" />
+        </a>
       </div>
       <div class="mb-4 flex space-x-4">
-          <a href="#" class="hover:underline">Privacy & Policy</a>
-          <a href="#" class="hover:underline">Terms & Conditions</a>
+        <a href="privacy.html" class="hover:underline">Privacy & Policy</a>
+        <a href="terms&condition.html" class="hover:underline">Terms & Conditions</a>
       </div>
       <div class="border-t border-white w-20 mb-4"></div>
-      <div class="text-sm">&copy; 2024 Your Company Name. All rights reserved.</div>
-  </footer>
-
+      <div class="text-sm">
+        &copy; 2024 LynRen. All rights reserved.
+      </div>
+    </footer>
+    
+    <!-- script for Chatbot -->
+    <script type="text/javascript">
+      (function (d, t) {
+        var v = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+        v.onload = function () {
+          window.voiceflow.chat.load({
+            verify: { projectID: "661942b6ac2c4721d7306e07" },
+            url: "https://general-runtime.voiceflow.com",
+            versionID: "production",
+          });
+        };
+        v.src = "https://cdn.voiceflow.com/widget/bundle.mjs";
+        v.type = "text/javascript";
+        s.parentNode.insertBefore(v, s);
+      })(document, "script");
+    </script>
   </body>
 </html>

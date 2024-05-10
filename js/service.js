@@ -19,12 +19,11 @@
             ]
         },
         3: {
-            title: 'Options for Service 3',
-            options: ['Option X for Service 3', 'Option Y for Service 3', 'Option Z for Service 3'],
+            title: 'Website & App Development',
+            options: ['Website Development', 'App Development'],
             content: [
-                'Details about option X for Service 3.',
-                'Details about option Y for Service 3.',
-                'Details about option Z for Service 3.'
+                "Transform your ideas into dynamic mobile experiences with Lynren's custom app development. Our expert team crafts intuitive and powerful mobile apps tailored to your business needs, driving engagement and growth.",
+                "Elevate your online presence with Lynren's exceptional website development services. We design and build captivating websites that reflect your brand and deliver seamless user experiences, empowering your business in the digital landscape"
             ]
         }
     };
